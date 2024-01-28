@@ -1,46 +1,62 @@
-# smart-test-task
+# Smart Test Task - Vue.js Web Application
 
-This template should help get you started developing with Vue 3 in Vite.
+## Table of Contents
 
-## Recommended IDE Setup
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Structure](#structure)
+- [Deployment](#deployment)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Introduction
 
-## Type Support for `.vue` Imports in TS
+This Vue.js web application interacts with the ReqRes API to display a list of users. Users can be added, deleted, and their details can be viewed. Additionally, the application supports filtering by name and implements form validation for adding new users.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Requirements
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+- Display a list of users from the ReqRes API, showing their name, email, and avatar.
+- Implement the ability to add a new user through a form with input fields for name and email.
+- Allow users to be deleted from the list with a corresponding button or icon.
+- Create a "User Details" component to show additional information about each user upon clicking their name. Displayed details include: phone number, address
+- Add a search field for filtering users by name or other parameters. The displayed user list should update dynamically as the user types.
+- Implement form validation for adding new users. The email field should only accept valid email addresses, and the name field should not be empty. Display appropriate error messages if the form is submitted with invalid data.
+- Apply styles to the application using CSS or a CSS preprocessor to create an attractive and user-friendly interface.
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Technologies
 
-## Customize configuration
+- **Vue.js:**: A JavaScript framework for building user interfaces.
+- **Formkit:** A Vue.js form library for handling forms and form validation.
+- **Axios:** A popular HTTP client for making requests to external APIs.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Installation
 
-## Project Setup
+1. **Clone the repo**
 
-```sh
+```bash
+https://github.com/your-username/smart-test-task.git
+```
+
+2. **Install dependencies** It's recommended to use npm:
+
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+3. **Create a .env.local file**
 
-```sh
-npm run dev
-```
+## Structure
 
-### Type-Check, Compile and Minify for Production
+The project is structured as follows:
 
-```sh
-npm run build
-```
+- _components:_ React components used throughout the application.
+- _hooks:_ Custom React hooks.
+- _public:_ Static assets such as images and styles.
+- _services:_ Business logic and external service interactions.
+- _types_: TypeScript types.
 
-### Lint with [ESLint](https://eslint.org/)
+## Deployment
 
-```sh
-npm run lint
-```
+The project is currently deployed on [Vercel](https://smart-test-task.vercel.app/)
+
+Feel free to check the live deployment and interact with the application.
