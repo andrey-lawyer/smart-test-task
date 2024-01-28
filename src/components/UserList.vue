@@ -57,7 +57,6 @@ defineProps({
 })
 
 const handleUserClick = (userId: number | string, user: IUser) => {
-  console.log(`Show details for user with ID: ${userId}`)
   idUser.value = userId
   oneUser.value = user
   showModal()
