@@ -51,7 +51,7 @@ const isShowMoreActive = computed(() => {
 
 <template>
   <main class="container main">
-    <h1 class="title">User list</h1>
+    <h1 class="title">Users</h1>
 
     <UserFilter
       :users="filteredUsers"
