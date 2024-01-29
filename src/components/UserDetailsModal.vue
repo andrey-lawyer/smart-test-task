@@ -1,8 +1,6 @@
 <template>
   <div class="block">
-    <div v-if="loading" class="user-details-modal loading">
-      <div class="loader"></div>
-    </div>
+    <div v-if="loading" class="loader"></div>
     <div v-else-if="userDetails" class="user-details-modal">
       <div class="user-info">
         <img
@@ -14,7 +12,7 @@
       <h2 class="title">{{ userDetails.first_name }} {{ userDetails.last_name }}</h2>
       <p class="text">{{ userDetails.email }}</p>
       <p v-if="userDetails?.address" class="text">address: {{ userDetails?.address }}</p>
-      <p v-if="userDetails?.address" class="text">phone: {{ userDetails?.phone }}</p>
+      <p v-if="userDetails?.phone" class="text">phone: {{ userDetails?.phone }}</p>
     </div>
   </div>
 </template>
@@ -42,6 +40,7 @@ const userDetails = ref<IUser | null>(null)
 const toast = useToast()
 onMounted(async () => {
   try {
+    console.log(props.user)
     loading.value = true
     await getUser(props.userId)
     userDetails.value = props.user
@@ -64,6 +63,7 @@ onMounted(async () => {
   background-color: var(--font-color);
   border-radius: 8px;
   height: 100%;
+
   margin: 0 auto;
 
   display: flex;
@@ -78,6 +78,10 @@ onMounted(async () => {
 }
 
 .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
   width: 40px;
   height: 40px;
   border: 4px solid #3498db;

@@ -81,7 +81,7 @@ const handleUserClick = (userId: number | string, user: IUser) => {
 
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .user-card {
