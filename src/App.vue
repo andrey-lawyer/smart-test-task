@@ -45,7 +45,7 @@ const filteredUsers = computed(() => {
 })
 
 const isShowMoreActive = computed(() => {
-  return !loading.value && filteredUsers.value.length < totalUsers.value
+  return !loading.value && users.value.length < totalUsers.value
 })
 </script>
 

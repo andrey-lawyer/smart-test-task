@@ -16,7 +16,7 @@ export function useUsersList() {
       loading.value = true
       const data = await getAllUsers(page.value)
       users.value = [...users.value, ...data.data]
-      totalUsers.value = data.total
+      if (page.value === 1) totalUsers.value = data.total
       page.value += 1
     } catch (error) {
       toast.error('Error fetching users', {

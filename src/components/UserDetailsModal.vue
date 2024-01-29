@@ -18,11 +18,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, defineProps } from 'vue'
+import { ref, onMounted, defineProps, type PropType } from 'vue'
 import { useToast } from 'vue-toastification'
+
 import { getUser } from '@/services/api'
 import type { IUser } from '@/types/IUserApi'
-import type { PropType } from 'vue'
 
 const props = defineProps({
   userId: {

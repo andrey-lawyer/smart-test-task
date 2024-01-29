@@ -23,14 +23,17 @@
 
 <script setup lang="ts">
 import { defineProps, type PropType } from 'vue'
+
 import IconDelete from './icons/IconDelete.vue'
 import IconUpdate from './icons/IconUpdate.vue'
 import ButtonAction from './ButtonAction.vue'
 import ModalUi from './ModalUi.vue'
-import useModal from '@/hooks/useModal'
-import type { IUser } from '@/types/IUserApi'
 import FormUser from './FormUser.vue'
+
 import { useUserDEleteApi } from '@/hooks/useUserDeleteApi'
+import useModal from '@/hooks/useModal'
+
+import type { IUser } from '@/types/IUserApi'
 
 const props = defineProps({
   userId: {

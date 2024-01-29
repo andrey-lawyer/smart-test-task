@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref ,type  PropType } from 'vue'
+
+import { useUsersApi } from '@/hooks/useUserApi'
 
 import type { IDataSubmit } from '@/types/IDataSubmit'
 import type { TypeForm } from '@/types/typeForm'
-import type { PropType } from 'vue'
 import type { IUser } from '@/types/IUserApi'
-import { useUsersApi } from '@/hooks/useUserApi'
 
 const props = defineProps({
   type: {

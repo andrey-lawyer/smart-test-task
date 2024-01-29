@@ -27,11 +27,11 @@
 </template>
 
 <script setup lang="ts">
-import type { IUser } from '@/types/IUserApi'
+import { ref, watch, defineProps, defineEmits } from 'vue'
 import type { PropType } from 'vue'
-import { ref, watch } from 'vue'
-import { defineProps, defineEmits } from 'vue'
+
 import { useDebounceFn } from '@vueuse/core'
+import type { IUser } from '@/types/IUserApi'
 
 const props = defineProps({
   users: {

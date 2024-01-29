@@ -31,11 +31,14 @@
 <script setup lang="ts">
 import { defineProps, ref } from 'vue'
 import UserActions from './UserActions.vue'
-import type { IUser } from '@/types/IUserApi'
 import type { PropType } from 'vue'
+
 import useModal from '@/hooks/useModal'
 import ModalUi from './ModalUi.vue'
 import UserDetailsModal from './UserDetailsModal.vue'
+
+import type { IUser } from '@/types/IUserApi'
+
 const { modelVisible, showModal } = useModal()
 
 const idUser = ref<number | string>('')
